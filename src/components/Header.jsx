@@ -46,7 +46,8 @@ function Header() {
                     </div>
 
                     <nav className='w-screen flex flex-row justify-end items-center text-sm text-gray-600 font-medium lg:gap-8'>
-                            <ul className={`flex flex-col justify-start items-start gap-8 absolute top-34 left-5 lg:flex lg:flex-row lg:static lg:items-center${showMenu ? 'hidden' : 'flex'}`}>
+                            <ul className={`flex flex-col justify-start items-start gap-8 absolute top-34 left-0 right-0 pl-5 pb-5 lg:flex lg:flex-row 
+                                lg:static lg:items-center z-1 bg-white w-full lg:justify-end lg:pl-0 ${showMenu ? 'hidden' : 'flex'}`}>
                                 {/* 7th september w */}
 
                                 <li>
@@ -86,9 +87,9 @@ function Header() {
                                 </li>
                             </ul>
 
-                        <ul className="flex flex-row items-center justify-center gap-8">
+                        <ul className="flex flex-row items-center justify-center gap-8 lg:self-start">
                             <li>
-                                <Link className='flex flex-row gap-2'><User /><span className='hidden lg:block'>Sign In</span></Link>
+                                <Link className='flex flex-row flex-nowrap gap-2'><User className='inline-block'/><span className='hidden whitespace-nowrap lg:block'>Sign In</span></Link>
                             </li>
 
                             <li>
