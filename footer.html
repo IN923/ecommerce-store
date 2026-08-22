@@ -1,0 +1,112 @@
+<footer className="bg-gray-900 text-white pt-10">
+    {/* Newsletter */}
+    <div className="max-w-6xl mx-auto px-4">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 font-serif">
+
+            {/* Newsletter text */}
+            <div className="lg:max-w-md">
+                <h3 className="text-2xl text-white font-semibold pb-2">
+                    Stay fresh with our newsletter
+                </h3>
+
+                <p className="text-gray-400 font-mono font-extralight text-sm">
+                    Subscribe for seasonal deals, new arrivals, and exclusive discounts.
+                </p>
+            </div>
+
+            {/* Newsletter form */}
+            <div className="w-full lg:max-w-xl">
+                <form className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex items-center gap-3 px-4 h-12 rounded-xl 
+                                    border border-gray-700 bg-gray-800 
+                                    text-sm text-gray-400 
+                                    focus-within:border-green-500 
+                                    transition-colors flex-1">
+
+                        <Mail size={20} className="shrink-0" />
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter Your Email"
+                            required
+                            className="w-full bg-transparent outline-none 
+                                       font-sans text-white 
+                                       placeholder:text-gray-500"
+                        />
+                    </div>
+
+                    <button
+                        type="submit"
+                        className="flex items-center justify-center gap-1
+                                   px-5 h-12 bg-green-500 
+                                   hover:bg-green-600 
+                                   rounded-xl font-sans text-sm 
+                                   font-semibold whitespace-nowrap
+                                   transition-colors"
+                    >
+                        <span>Subscribe</span>
+                        <Send width="18" height="18" />
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {/* Divider */}
+    <div className="max-w-6xl mx-auto px-4 mt-10">
+        <div className="border-t border-gray-800" />
+    </div>
+
+    {/* About / Links */}
+    <div className="max-w-6xl mx-auto px-4 py-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <div>
+                <h4 className="font-semibold text-lg mb-4">About Us</h4>
+                <p className="text-sm text-gray-400 leading-6">
+                    Fresh products, seasonal favorites, and quality you can trust.
+                </p>
+            </div>
+
+            <div>
+                <h4 className="font-semibold mb-4">Quick Links</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" className="hover:text-green-400">Home</a></li>
+                    <li><a href="#" className="hover:text-green-400">Shop</a></li>
+                    <li><a href="#" className="hover:text-green-400">About</a></li>
+                    <li><a href="#" className="hover:text-green-400">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 className="font-semibold mb-4">Customer Care</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                    <li><a href="#" className="hover:text-green-400">FAQs</a></li>
+                    <li><a href="#" className="hover:text-green-400">Shipping</a></li>
+                    <li><a href="#" className="hover:text-green-400">Returns</a></li>
+                    <li><a href="#" className="hover:text-green-400">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 className="font-semibold mb-4">Contact</h4>
+                <ul className="space-y-2 text-sm text-gray-400">
+                    <li>Email: hello@example.com</li>
+                    <li>Phone: +91 00000 00000</li>
+                    <li>Mon–Sat: 9AM–6PM</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    {/* Bottom */}
+    <div className="border-t border-gray-800">
+        <div className="max-w-6xl mx-auto px-4 py-5 text-center">
+            <p className="text-sm text-gray-500">
+                © 2026 Your Store. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>

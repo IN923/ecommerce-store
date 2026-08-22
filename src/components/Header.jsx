@@ -1,0 +1,112 @@
+import { React, useState, useEffect } from 'react';
+import { NavLink, Link } from 'react-router';
+import { Leaf, User, ShoppingCart, Menu, X } from 'lucide-react';
+
+function Header() {
+
+    const [showMenu, setShowMenu] = useState(true)
+    const [closeMenu, setCloseMenu] = useState(false)
+
+    const toggleMenu = (e) => {
+        e.preventDefault()
+        if (showMenu) {
+            setCloseMenu(true)
+            setShowMenu(false)
+        }
+        else {
+            setShowMenu(true)
+            setCloseMenu(false)
+        }
+        // setShowMenu(prevData=>!prevData)
+        // setCloseMenu(true)
+    }
+
+    // = -> showMenuIcon=true(show) x -> closeMenuIcon=false(hide)
+    // = ->showMenuIcon=false(hide) x -> closeMenuIcon=true(show)
+
+    useEffect(() => {
+        console.log("showMenu=", showMenu)
+    }, [showMenu])
+
+    return (
+        <>
+
+            <div>
+                <p className="bg-green-700 text-white text-center pt-2 pb-1 font-medium font-mono">Free delivery on orders over $50 — Fresh produce delivered to your door</p>
+            </div>
+            <header>
+                <div className='flex flex-row p-4'>
+                    <div className="flex flex-row gap-1.5 items-center">
+                        <div className="bg-green-700 rounded-xl px-2 py-2">
+                            <Leaf color="#fff" strokeWidth={2.5} />
+                        </div>
+                        <div className='text-xl font-bold font-serif'>
+                            Bazaar
+                        </div>
+                    </div>
+
+                    <nav className='w-screen flex flex-row justify-end items-center text-sm text-gray-600 font-medium lg:gap-8'>
+                            <ul className={`flex flex-col justify-start items-start gap-8 absolute top-34 left-5 lg:flex lg:flex-row lg:static lg:items-center${showMenu ? 'hidden' : 'flex'}`}>
+                                {/* 7th september w */}
+
+                                <li>
+                                    <NavLink to="">
+                                        Home
+                                    </NavLink>
+                                </li>
+
+                                <li>
+                                    <NavLink to="">
+                                        Shop All
+                                    </NavLink>
+                                </li>
+
+                                <li>
+                                    <NavLink to="">
+                                        Fruits
+                                    </NavLink>
+                                </li>
+
+                                <li>
+                                    <NavLink to="">
+                                        Vegetables
+                                    </NavLink>
+                                </li>
+
+                                <li>
+                                    <NavLink to="">
+                                        About
+                                    </NavLink>
+                                </li>
+
+                                <li>
+                                    <NavLink to="">
+                                        Contact
+                                    </NavLink>
+                                </li>
+                            </ul>
+
+                        <ul className="flex flex-row items-center justify-center gap-8">
+                            <li>
+                                <Link className='flex flex-row gap-2'><User /><span className='hidden lg:block'>Sign In</span></Link>
+                            </li>
+
+                            <li>
+                                <Link> <ShoppingCart /> </Link>
+                            </li>
+
+                            <li className={`pt-1.5`}>
+                                <button className={`${showMenu ? 'inline-block' : 'hidden'} lg:hidden`} onClick={toggleMenu}><Menu /></button>
+                                <button className={`${closeMenu ? 'inline-block' : 'hidden'} lg:hidden`} onClick={toggleMenu}> <X /> </button>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </header>
+
+        </>
+    )
+}
+
+export default Header
