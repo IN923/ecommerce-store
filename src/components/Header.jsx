@@ -32,7 +32,7 @@ function Header() {
         <>
 
             <div>
-                <p className="bg-green-700 text-white text-center pt-2 pb-1 font-medium font-mono">Free delivery on orders over $50 — Fresh produce delivered to your door</p>
+                <p className="bg-green-700 text-white text-center pt-2 pb-1 font-medium">Free delivery on orders over $50 — Fresh produce delivered to your door</p>
             </div>
             <header>
                 <div className='flex flex-row p-4'>
@@ -46,7 +46,7 @@ function Header() {
                     </div>
 
                     <nav className='w-screen flex flex-row justify-end items-center text-sm text-gray-600 font-medium lg:gap-8'>
-                            <ul className={`flex flex-col justify-start items-start gap-8 absolute top-34 left-0 right-0 pl-5 pb-5 lg:flex lg:flex-row 
+                            <ul className={`flex flex-col justify-start items-start gap-8 absolute top-33 left-0 right-0 pl-5 pb-5 lg:flex lg:flex-row 
                                 lg:static lg:items-center z-1 bg-white w-full lg:justify-end lg:pl-0 ${showMenu ? 'hidden' : 'flex'}`}>
                                 {/* 7th september w */}
 

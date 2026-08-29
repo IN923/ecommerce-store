@@ -13,7 +13,7 @@ function Footer() {
                                 Stay fresh with our newsletter
                             </h3>
 
-                            <p className='text-gray-400 font-mono font-extralight text-sm'>
+                            <p className='text-gray-400 font-extralight text-sm'>
                                 Subscribe for seasonal deals, new arrivals, and exclusive discounts.
                             </p>
                         </div>
