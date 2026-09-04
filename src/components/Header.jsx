@@ -5,17 +5,15 @@ import { Leaf, User, ShoppingCart, Menu, X } from 'lucide-react';
 function Header() {
 
     const [showMenu, setShowMenu] = useState(true)
-    const [closeMenu, setCloseMenu] = useState(false)
+    // const [closeMenu, setCloseMenu] = useState(false)
 
     const toggleMenu = (e) => {
         e.preventDefault()
         if (showMenu) {
-            setCloseMenu(true)
             setShowMenu(false)
         }
-        else {
+        else{
             setShowMenu(true)
-            setCloseMenu(false)
         }
         // setShowMenu(prevData=>!prevData)
         // setCloseMenu(true)
@@ -98,7 +96,7 @@ function Header() {
 
                             <li className={`pt-1.5`}>
                                 <button className={`${showMenu ? 'inline-block' : 'hidden'} lg:hidden`} onClick={toggleMenu}><Menu /></button>
-                                <button className={`${closeMenu ? 'inline-block' : 'hidden'} lg:hidden`} onClick={toggleMenu}> <X /> </button>
+                                <button className={`${showMenu ? 'hidden' : 'inline-block'} lg:hidden`} onClick={toggleMenu}> <X /> </button>
                             </li>
                         </ul>
 

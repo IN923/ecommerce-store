@@ -1,8 +1,16 @@
-import React from 'react'
+import {React, useState, useEffect} from 'react'
 import {Link} from 'react-router'
-import { Leaf, Mail, Lock, Eye, MoveRight } from 'lucide-react'
+import { Leaf, Mail, Lock, Eye, MoveRight} from 'lucide-react'
 
 function SignUp() {
+
+    const [email,setEmail] = useState('')
+    const [password,setPassword] = useState('')
+
+    useEffect(()=>{
+        console.log(`email = ${email}`);
+    },[email]);
+    
     return (
         <>
             <div className='flex flex-col items-center gap-8'>
@@ -16,8 +24,8 @@ function SignUp() {
                 </div>
 
                 <div>
-                    <h1 className='font-display font-bold font-serif tracking-tight text-center text-3xl'>Create your account</h1>
-                    <p className='text-sm mt-2 text-gray-500 text-center'>Sign up to start shopping fresh, organic produce.</p>
+                    <h1 className='font-display font-bold font-serif tracking-tight text-center text-3xl'>Welcome back</h1>
+                    <p className='text-sm mt-2 text-gray-500 text-center'>Sign in to your account to continue shopping.</p>
                 </div>
 
                 <div className='bg-white border border-gray-200 min-w-xs md:min-w-sm px-6 py-6 rounded-2xl'>
@@ -26,15 +34,23 @@ function SignUp() {
                             <label htmlFor="email" className='text-gray-800 text-sm  font-normal'>Email</label>
                             <div className='relative '>
                                 <Mail color="#C0C4CB" className='absolute top-5 left-3 w-4 h-4' />
-                                <input type="email" placeholder='you@example.com' className='w-full border border-gray-300 px-10 py-3 text-sm rounded-lg min-w-2xs bg-gray-50 font-medium focus:border-green-500 outline-none mt-1' />
+                                <input type="email" placeholder='you@example.com' className='w-full border
+                                 border-gray-300 px-10 py-3 text-sm rounded-lg min-w-2xs bg-gray-50 
+                                 font-medium focus:border-green-500 outline-none mt-1' 
+                                 onChange={(e)=>{setEmail(e.target.value)}}
+                                 />
                             </div>
                         </div>
 
                         <div className='mb-4'>
                             <label htmlFor="email" className='text-gray-800 text-sm font-normal'>Password</label>
-                            <div className='relative '>
+                            <div className='relative'>
                                 <Lock color="#C0C4CB" className='absolute top-5 left-3 w-4 h-4' />
-                                <input type="password" placeholder='Your password' className='w-full border border-gray-300 px-10 py-3 text-sm rounded-lg min-w-2xs bg-gray-50 font-medium focus:border-green-500 outline-none mt-1' />
+                                <input type="text" placeholder='At least 6 characters' 
+                                className='w-full border border-gray-300 px-10 py-3 text-sm rounded-lg min-w-2xs
+                                 bg-gray-50 font-medium focus:border-green-500 outline-none mt-1' 
+                                onChange={(e)=>{setPassword(e.target.value)}} 
+                                />
                                 <Eye color="#C0C4CB" className='absolute top-5 right-3 w-4 h-4' />
                             </div>
                         </div>
@@ -42,7 +58,7 @@ function SignUp() {
                         <div className='mb-4'>
                             <button className='text-white font-semibold w-full py-2 bg-green-600 rounded-lg mb-4'>Sign In <MoveRight className='inline-block w-5 h-5' /></button>
 
-                            <p className='text-sm text-center'>Already have an account? <Link to='/login' className='text-green-600 font-semibold'>Sign in</Link></p>
+                            <p className='text-sm text-center'>Don't have an account? <Link className='text-green-600 font-semibold' to='/signup'>Sign up</Link></p>
                         </div>
                     </form>
                 </div>
