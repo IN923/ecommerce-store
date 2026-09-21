@@ -55,7 +55,7 @@ function Header() {
                                 </li>
 
                                 <li>
-                                    <NavLink to="">
+                                    <NavLink to="shop_all">
                                         Shop All
                                     </NavLink>
                                 </li>

@@ -8,6 +8,7 @@ import Layout from './components/Layout.jsx'
 import Home from './components/Home.jsx'
 import SignUp from './components/SignUp.jsx'
 import Login from './components/Login.jsx'
+import ShopAll from './components/ShopAll.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         element:<Login/>,
         path:'/login'
+      },
+      {
+        element:<ShopAll/>,
+        path:'/shop_all'
       }
     ]
   }
