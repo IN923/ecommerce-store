@@ -2,8 +2,8 @@ import { React, useState } from 'react'
 import { SlidersHorizontal, X } from 'lucide-react'
 
 function SideBar({showSidebar,handleShowSidebar}) {
-  // console.log("show sidebar",showSidebar)
-  // console.log("show sidebar prop",handleShowSidebar)
+  console.log("show sidebar",showSidebar)
+  console.log("show sidebar prop",handleShowSidebar)
   return (
     <>
       <div>
@@ -11,11 +11,11 @@ function SideBar({showSidebar,handleShowSidebar}) {
         <div className={`fixed inset-0 bg-black/25 z-30 ${showSidebar ? 'block' : 'hidden'}`}></div>
 
 
-        <div className={`fixed top-0 bottom-0 left-0 z-40 bg-white w-4/5 py-8 px-6 md:block md:static md:min-w-3xs overflow-y-auto md:h-7/10 text-gray-800 ${showSidebar ? 'block' : 'hidden'}`}>
+        <div className={`fixed top-0 bottom-0 left-0 z-40 bg-white w-4/5 md:w-5/10 py-8 px-6 lg:block lg:static lg:min-w-3xs overflow-y-auto lg:h-7/10 text-gray-800 ${showSidebar ? 'block' : 'hidden'}`}>
 
           <div className='flex justify-between'>
-            <h5 className='font-semibold font-serif text-lg mb-5 md:hidden'>Filters</h5>
-            <X className='w-4 h-4 inline-block md:hidden' onClick={handleShowSidebar} />
+            <h5 className='font-semibold font-serif text-lg mb-5 lg:hidden'>Filters</h5>
+            <X className='w-4 h-4 inline-block lg:hidden' onClick={handleShowSidebar} />
           </div>
 
           <h6 className='font-semibold text-sm tracking-wide mb-4'>CATEGORIES</h6>

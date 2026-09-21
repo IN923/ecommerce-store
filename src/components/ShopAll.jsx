@@ -19,7 +19,7 @@ function ShopAll() {
                 <p className='text-gray-500 mb-5'>Browse our full selection of fresh, organic produce.</p>
             </div>
             <div className='flex flex-row md:gap-8'>
-                {/* <Sidebar showSidebar={showSidebar} handleShowSidebar={handleShowSidebar} /> */}
+                <Sidebar showSidebar={showSidebar} handleShowSidebar={handleShowSidebar} />
                 <div className='w-full'>
                     <SearchBar showSidebar={showSidebar} handleShowSidebar={handleShowSidebar} />
                     <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 pt-6'>

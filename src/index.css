@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* *{
+  border: 1px solid red;
+} */
+
 /* In your index.css or App.css */
 body {
   margin: 0;
